@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html>
+ <head>
+  <title>งานที่2</title>
+  <meta charset="UTF-8">
+ </head>
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: violet;
+    clear: left;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+   <h1>งานที่2</h1>
+</header>
+  
+<nav>
+  <ul>
+    <li>
+     <h5 style="color:blue;">ลิ้งค์ภายนอกคลิกด้านล่าง</h5>
+    </li>
+    <li><a href="http://www.google.com"><img src="google.jpg" alt="google" width="125px" height="30px"></a></li>
+    <li><a href="http://www.facebook.com"><img src="facebook.jpg" alt="facebook" width="125px" height="30px"></a></li>
+    <li><a href="http://www.youtube.com"><img src="youtube.png" alt="youtube" widh="125px" height="30px"></a></li>
+  </ul>
+</nav>
+ <article>
+  <h1>HEADER h1</h1>
+  <h2>HEADER h2</h2>
+  <h3>HEADER h3</h3>
+  <h4>HEADER h4</h4>
+  <h5>HEADER h5</h5>
+  <h6>HEADER h6</h6>
+  <hr color="#999999">
+  <p>เนื้อหาเกี่ยวกับการเขียนเว็บ HTML 5 จากเว็บ W3CSchool.com โดยการตรวจจะมีเช็คลิสเพื่อเช็คความสมบูรณ์ของเนื้อหา</p>
+  <hr color="#999999">
+  
+  <!-- This is a comment -->
+  <div style="background-color:lightblue;color:white;padding:20px;">
+  <h2>เปิดฟังเพลงด้านล่าง</h2>
+  <audio controls>
+  <source src="sound.mp3" type="audio/ogg">
+  <source src="sound.mp3" type="audio/mpeg">
+  </audio>
+  </div>
+  <p>
+   <h2 style="color:#C6F;">หัวข้อสีชมพู<h2>
+   <img src="cyber.jpg" alt="cyber" width="450px" height="450px"><br>
+   <b>ตัวหนา,</b>&nbsp;
+   <i>ตัวเอียง,</i>&nbsp;&nbsp;
+   <s>ขีด</s><br>
+   
+   <abbr title="I LOVE YOU">คำย่อ ILY</abbr>
+   <hr color="#999999">
+   <h1 style="background-color:lightgray;">หัวข้อมีสีพื้นหลัง</h1>
+   <h1 style="border:2px solid Violet;">มีเส้นขอบสีชมพู</h1>
+   <hr color="#999999">
+   
+   <h1 align="center">ส่วนของตาราง</h1>
+   <table style="width:50%" align="center" border="1" bordercolor="#0000FF">
+  <tr>
+    <th>ชื่อ</th>
+    <th>นามสกุล</th> 
+    <th>อายุ</th>
+    <th>รหัสนักศึกษา</th>
+  </tr>
+  <tr>
+    <td>ปวินทร์</td>
+    <td>เข็นภูเขียว</td> 
+    <td>20</td>
+    <td>591102108</td>
+  </tr>
+ </table>
+ <h3>ข้อมูลแบบรายการ</h3>
+ <ul style="list-style-type:disc">
+  <li>ปวินทร์</li>
+  <li>เข็นภูเขียว</li>
+  <li>20</li>
+  <li>591102108</li>
+ </ul>
+  </p>
+  <hr color="#999999">
+  
+  <div style="background-color:blueviolet;color:white;padding:20px;">
+  <h1>รูปแบบของบล็อคข้อมูล</h1><hr color="white">
+  <iframe src="iff.html" height="250" width="450" style="border:2px solid grey; background:#FFF;"></iframe>
+  
+  <h1>รูปแบบของฟอร์มที่ใช้ในการกรอกข้อมูล</h1>
+ เพื่อกรอกอะไรบ้างอย่าง::<input type="text" name="txt1" id="txt1" /> <br>
+ เลือก::<select name="s1">
+     <option value="ตัวเลือกที่1">ตัวเลือกที่1</option>
+     <option value="ตัวเลือกที่2">ตัวเลือกที่2</option>
+    </select><br><br>
+    <b>เพื่อเช็คความถูกต้อง</b><br>
+    ถูก:: <input type="radio" name="ch1" id="ch1" value="1">
+    ผิด:: <input type="radio" name="ch1" id="ch1" value="0"><br>
+    <hr color="white">
+    <h2>สร้างรูปภาพเรขาคณิตด้วยคำสั่ง svg</h2>
+    <h3>รูปวงกลม</h3>
+     <svg width="100" height="100">
+  <circle cx="50" cy="50" r="40"
+  stroke="green" stroke-width="4" fill="yellow" />
+  <br>
+  <h3>รูปสี่เหลี่ยมผืนผ้า</h3>
+  <svg width="200" height="100">
+  <rect width="200" height="100" style="fill:rgb(0,0,255);stroke-width:10  ;stroke:rgb(0,0,0)" />
+  </svg><br>
+  <h3>รูปสี่เหลี่ยม</h3>
+  <svg width="400" height="180">
+   <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+   style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+  </svg><br>
+  <h3>รูปดาว</h3>
+  <svg width="300" height="200">
+   <polygon points="100,10 40,198 190,78 10,78 160,198"
+   style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+  </svg>
+</svg>
+  </div>
+ </article>
+
+<footer>Copyright By :Pawin</footer>
+
+</div>
+
+ </body>
+</html>
