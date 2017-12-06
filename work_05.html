@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>งานที่5 Bootstrap</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  .pagination {
+    display: inline-block;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+.pagination a:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.pagination a:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+  </style>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>หน้าแรก</h1>
+  <p>รวบรวมสิ่งที่น่าสนใจไว้มากมาย กับเว็บที่ทำขึ้นด้วยภาษา HTML 5</p> 
+</div>
+  
+<div class="container">
+  <button type="button" class="btn btn-default"><a href="work_05.html">หน้าแรก</a></button>
+  <button type="button" class="btn btn-info"><a href="work_05_2.html"><font color="#FFFFFF">หน้าที่2</font></a></button>
+  <button type="button" class="btn btn-primary"><a href="http://www.facebook.com"><font color="#FFFFFF">Facebook</font></a></button>
+  <button type="button" class="btn btn-warning"><a href="http://www.google.com"><font color="#ffffff">Google</font></a></button>
+  <button type="button" class="btn btn-danger"><a href="http://www.youtube.com"><font color="#FFFFFF">Youtube</font></a></button> 
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>ประวัติส่วนตัว</h3>
+      <p>ชื่อ นายปวินทร์  เข็นภูเขียว</p>
+      <p>นักศึกษามหาวิทยาลัยราชภัฏชัยภูมิ<br>
+      สาขาวิทยาการคอมพิวเตอร์</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>งานที่ 5</h3>
+      <p>ทำเว็บโดยใช้ Bootstrap</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>วัตถุประสงค์</h3>        
+      <p>เพื่อศึกษาโค้ดที่ใช้ในการทำเว็บ HTML ว่ามีประโยชน์และความสามารถอย่างไรบ้าง เพื่อนำไปปรับใช้กับชีวิตประจำวันให้ดียิ่งขึ้น คนที่ต้องการทำเว็บไซต์ต้องลองศึกษาจากเว็บ <a href="http://www.w3schools.com">W3school</a> เป็นเว็บที่สอนดีมาก ไม่จำเป็นต้องคิดมากลองเรย</p>
+    </div>
+    <img src="https://www.viamagazine.com/sites/default/files/styles/565w_no_crop/public/images/Bald_Eagle_Portrait.jpg?itok=AGWiMrP4" class="img-circle" alt="Cinque Terre" width="304" height="236">
+  </div>
+</div><br><br><br><center>
+  <ul class="pager">
+  <li><a href="#">หน้าแรก</a></li>
+  <li><a href="work_05_2.html">2</a></li>
+  <li><a href="work_05_3.html">3</a></li>
+  <li><a href="work_05_2.html">หน้าถัดไป</a></li>
+  </ul></center>
+</body>
+</html>
