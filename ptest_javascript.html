@@ -1,0 +1,86 @@
+﻿<html>
+ <head>
+  <title>ทดสอบ JavaScript ปวินทร์</title>
+  <style>
+   h1{
+	background-color:#33ccff;
+	padding:10px;
+	text-shadow:2px 4px 4px white;
+}
+   p{
+   	background-color:lightblue;
+	padding:10px;
+	text-shadow: 2px 2px 5px green;
+}
+img{
+	box-shadow: 10px 10px 5px grey;
+	}
+  </style>
+ </head>
+ <body>
+  <center><h1>งานทดสอบการใช้ JavaScript</h1></center>
+  1.เทคนิคที่ใช้เพื่อดูเวลา และวันที่
+  <br><button type="button" onClick="document.getElementById('demo').innerHTML=Date()">
+  คลิกฉันเพื่อดูเวลาและวันที่</button>
+  
+  <p id="demo"></p>
+  
+  2.เทคนิคเปลี่ยนเนื้อหา (Element) ของเวลาและวันที่ให้เป็นคำทักทายโดยใช้ Element เดียวกัน
+ <br><button type="button" onclick='getElementById("demo").innerHTML="สวัสดี เราชื่อ ปวินทร์ เข็นภูเขียว"'>
+  คลิกเราเพื่อทักทาย</button><br><br>
+
+ 3.เทคการเปลี่ยนขนาดของตัวอักษร หรือเนื้อหา(Element)ของ HTML  <br>
+ <button type="button" onClick="getElementById('typo').style.fontSize='25px'">คลิกเพื่อเปลี่ยนขนาดตัวอักษร</button>
+  <p id="typo">ถ้าคลิกปุ่มด้านบนขนาดจะเพิ่มขึ้นสูงสุดที่ 25px หรือ (25 พิกเซล)</p><br>
+4.เทคนิคซ่อนเนื้อหา(Element) ที่เป็นรูปภาพ<br>
+ <button type="button" onClick="getElementById('pho').style.display='none'">คลิกเราเพื่อซ่อนเนื้อหา</button><br><p id="pho"><img src="d.jpg" width="450" height="450"></p>
+5.เทคนิคที่ใช้แสดงรูปภาพที่ซ่อนไว้<br>
+ <button type="button" onClick="getElementById('pho').style.display='block'">คลิกเราเพื่อแสดงเนื้อหาที่ซ่อนไว้</button><br>
+6.เทคนิคดูเวลาหรือวันที่ โดยที่แสดงในปุ่มกดนี้ได้เรย<br>
+ <button type="button" onclick='this.innerHTML=Date()'>คลิกเพื่อแสดงวัน เวลา</button><br>
+7.เทคนิคการนับค่าจำนวนอาเรยใหม่ที่เพิ่มขึ้น<br>
+ <button type="button" onClick="myFunction()">ลองเลย</button><br>
+ <p id="demo2"></p>
+ <p id="demo1"></p>
+ <script>
+ var car=["Colorado","MustangGT","Dmax"];
+ document.getElementById("demo1").innerHTML=car;
+ function myFunction() {
+	 document.getElementById("demo1").innerHTML=car.push("BMW");
+	 document.getElementById("demo2").innerHTML=car;
+	 }
+ </script><br>
+ 8.เทคนิคการเรียงลำดับค่าอาเรย์จากน้อยไปหามาก Min to Max<br>
+ <button onClick="myFunction2()">เรียงค่า</button>
+<p id="deme"></p>
+<script>
+var points = [80, 1, 10, 55, 45, 90, 29];
+document.getElementById("deme").innerHTML = points;    
+
+function myFunction2() {
+    points.sort(function(a, b){return a - b});
+    document.getElementById("deme").innerHTML = points;
+}
+</script>
+<br>
+ 9.เทคนิคการการเปรียบเทียบส่วนสูง ว่าอยู่ในเกณฑ์อะไร<br>
+ <input id="tall" value="">
+ <button onClick="myFunction3()">ลองเรย</button><p id="demo4"></p><br>
+ <script>
+  function myFunction3() {
+	  var age,voteable;
+	  tall = document.getElementById("tall").value;
+	  voteable=(tall<160)? "เตี้ยนะจ๊ะ":"สูงแล้วนะ";
+	  document.getElementById("demo4").innerHTML=voteable;
+	  }
+ </script>
+ <br>
+ 10.ใช้เทคนิคแสดงปี ค.ศ <br>
+ <p id="dem"></p>
+
+<script>
+var d = new Date();
+document.getElementById("dem").innerHTML = d.getFullYear();
+</script>
+ </body>
+</html>
