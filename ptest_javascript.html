@@ -113,6 +113,24 @@ function myFunction() {
     alert("สวัสดี ผมชื่อปวินทร์ เข็นภูเขียว");
 }
 </script>
+</div><br><br><br>
+<div>
+ 12.เทคนิคการแสดงป็อพอัพเพื่อตรวจสอบเงื่อนไข
+ <br>
+ <button type="button" onclick="my2Function()">ลองเรย</button><br>
+ <p id="pp"></p>
+ <script>
+  function my2Function{
+  var txt;
+   if(confirm("คุณเป็นกระเทย หรือ ไม่") == true){
+    txt = "คุณคือกระเทยตัวจริง";
+   }
+   else{
+    txt = "คุณไม่ใช่กระเทย";
+   }
+    document.getElementById("pp").innerHTML=txt;
+  }
+ </script>
 </div>
  </body>
 </html>
