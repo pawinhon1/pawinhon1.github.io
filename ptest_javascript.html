@@ -131,6 +131,18 @@ function myFunction() {
     document.getElementById("pp").innerHTML=txt;
   }
  </script>
+</div><br><br><br>
+<div>
+  13.เทคนิคแสดง Popup โดยใช้ร่วมกับ CSS<br><br>
+<div class="popup" onclick="myFunction()">คลิกเพื่อแสดง
+ <span class="popuptext" id="myPopup">การทดสอบเสร็จสิ้น</span> 
+</div>
+<script>
+ function myFunction(){
+ var popup = document.getElementById('myPopup');
+ popup.classlist.toggle('show');
+}
+</script>
 </div>
  </body>
 </html>
