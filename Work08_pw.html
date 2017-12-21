@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>งานที่ 8</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-image: url(http://www.readingorders.net/wp-content/uploads/2017/03/seamless-desert-sand-texture.jpg);
+}
+div{
+  padding:3px;
+  color:white;
+  text-shadow: 1px 1px 2px brown, 0 0 25px brown, 0 0 5px brown;
+}
+.div2{
+  margin-left:20px;
+}
+p{
+	font-size:18px;
+	color:#000;
+	}
+/* Style the header */
+.header {
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Sand_from_Gobi_Desert.jpg/600px-Sand_from_Gobi_Desert.jpg);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-image: url(https://images.pexels.com/photos/247666/pexels-photo-247666.jpeg?h=350&auto=compress&cs=tinysrgb);
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #f4acc0;
+    color: black;
+}
+.button3 {
+    background-color: #f44336;
+}
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+#container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: white;
+}
+#animate {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: blue;
+}
+table,th,td {
+  border : 1px solid black;
+  border-collapse: collapse;
+}
+th,td {
+  padding: 5px;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>งานที่ 8 ปวินทร์  เข็นภูเขียว</h1>
+</div>
+
+<div class="topnav">
+  <a href="http://www.facebook.com">Facebook</a>
+  <a href="http://www.google.com">Google</a>
+  <a href="http://www.youtube.com">Youtube</a>
+</div>
+<br>
+<div class="div2">
+ <h2>1.JS FORM_Forms API</h2>
+ <input id="id1" type="number" min="1" max="100" required>
+ <button class="button3" onclick="myFunction()">ตกลง</button>
+<p>ใส่ตัวเลขตั้งแต่ 1-100 ถ้าใส่เกินจำนวนที่กำหนดไว้ จะแจ้งเตือนว่า "เกิน 100 ไม่สามารถรับข้อมูลได้"</p>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var inpObj = document.getElementById("id1");
+    if (!inpObj.checkValidity()) {
+        document.getElementById("demo").innerHTML = "<font color='#ff0000'>เกิน 100 ไม่สามารถรับข้อมูลได้</font>";
+    } else {
+        document.getElementById("demo").innerHTML = "<font color='#00ff00'>Input เรียบร้อยแล้ว</font>";
+    } 
+} 
+</script>
+</div>
+<div class="div2">
+ <h2>2.JavaScript objects</h2>
+<p>เปลี่ยนแปลงเนื้อหาให้สมบูรณ์มากยิ่งขึ้น</p>
+
+<p id="demo2">Pawin</p>
+<button class="button3" onclick="myFunction2()">click</button>
+<script>
+function myFunction2(){
+var person = {firstName:"Pawin", lastName:"Khenphukhiaw", age:20, eyeColor:"blue"}
+
+var x = person;
+x.age = 20;
+
+document.getElementById("demo2").innerHTML =
+person.firstName + " is " + person.age + " years old.";}
+</script>
+</div>
+<div>
+<div class="div2">
+ <h2>3.JS HTML DOM</h2>
+ &nbsp;<3.1>เปลี่ยนแปลงเนื้อหา HTML <br>
+ &nbsp;&nbsp;<p id="id">ข้อความ</p>
+ <button class="button3" type="button" onclick="document.getElementById('id').innerHTML='ข้อความใหม่ สวัสดีครับ'">คลิก</button><br>
+
+ &nbsp;<3.2>เปลี่ยนรูปแบบสี Css<br>
+ &nbsp;&nbsp;<p id="id2">เปลี่ยนเป็นสีน้ำเงิน</p>
+<button class="button3" onclick="document.getElementById('id2').style.color='blue'">Click</button><br>
+ <p>
+ &nbsp;<3.3>แอนิเมชั่น ภาพเคลื่อนไหวด้วย JavaScript<br>
+  <button class="button3" onclick="myMove()">Click Me</button>
+</p> 
+
+<div id ="container">
+<div id ="animate"></div>
+</div>
+
+<script>
+function myMove() {
+  var elem = document.getElementById("animate");   
+  var pos = 0;
+  var id = setInterval(frame, 5);
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + 'px'; 
+      elem.style.left = pos + 'px'; 
+    }
+  }
+}
+</script>
+</div>
+<div class="div2">
+ <h2>4.JS Functions</h2>
+ <p><4.1>ตัวอย่างการเรียกใช้ฟังก์ชั่น เพื่อแสดงค่าที่มากที่สุด</p>
+
+<p id="demoo"></p>
+
+<script>
+document.getElementById("demoo").innerHTML = Math.max(1,2,3,4,5,6,7,8,9,10); 
+</script>
+  <p><4.2>ฟังก์ชั่นนับเลข เพิ่มทีละ 1</p>
+<button class="button3" onclick="myFunction()">Click</button>
+
+<p id="dem">100</p>
+
+<script>
+var counter = 100;
+
+function add() {
+    return counter += 1;
+}
+
+function myFunction(){
+    document.getElementById("dem").innerHTML = add();
+}
+</script>
+</div>
+<div class="div2">
+ <h2>5.JS Browser BOM</h2>
+ <p>บอกขนาดความกว้างของจอ</p>
+ <p id="de"></p>
+
+<script>
+document.getElementById("de").innerHTML = 
+"Screen width is " + screen.width;
+</script>
+</div>
+<div class="div2">
+ <h2>6.JS AJAX</h2>
+
+</div>
+<div class="div2">
+ <h2>7.JS JSON</h2>
+ <script>
+
+var myObj = { "name":"John", "age":31, "city":"New York" };
+var myJSON = JSON.stringify(myObj);
+window.location = "demo_json.php?x=" + myJSON;
+
+</div>
+</body>
+</html>
